@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/ll_popup_window"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_popup_interaction_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="13KM"
+                android:textColor="@color/textcolor3"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_popup_interaction_head"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:src="#eeeeee" />
+
+            <TextView
+                android:id="@+id/tv_popup_interaction_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_popup_interaction_distance"
+                android:layout_toRightOf="@id/iv_popup_interaction_head"
+                android:text="title"
+                android:textColor="@color/textcolor1"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_popup_interaction_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_popup_interaction_name"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@id/tv_popup_interaction_distance"
+                android:layout_toRightOf="@id/iv_popup_interaction_head"
+                android:text="id:13212313"
+                android:textColor="@color/themecolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_popup_interaction_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_popup_interaction_id"
+                android:layout_toLeftOf="@id/tv_popup_interaction_distance"
+                android:layout_toRightOf="@id/iv_popup_interaction_head"
+                android:text="dsjaodjiasd"
+                android:textColor="@color/textcolor3"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_popup_interaction_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_popup_interaction_func"
+                        android:drawableLeft="@drawable/ic_popup_interaction_1"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="5dp"
+                        android:text="查看资料"
+                        android:textColor="@color/textcolor1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_popup_interaction_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_popup_interaction_func"
+                        android:drawableLeft="@drawable/ic_popup_interaction_2"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="5dp"
+                        android:text="匿名聊天"
+                        android:textColor="@color/textcolor1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_popup_interaction_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_popup_interaction_func"
+                        android:drawableLeft="@drawable/ic_popup_interaction_3"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="添加好友"
+                        android:textColor="@color/textcolor1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_popup_interaction_add2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_popup_interaction_func"
+                        android:drawableLeft="@drawable/ic_popup_interaction_4"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="关注此人"
+                        android:textColor="@color/textcolor1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

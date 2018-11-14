@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="12dp">
+
+    <TextView
+        android:id="@+id/tv_item_mechanism_fragment2_addcomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_find_bac4"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:text="我要评价"
+        android:textColor="@color/themecolor" />
+
+    <com.zhishen.aixuexue.weight.RatingBar
+        android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:clickable="false"
+        app:halfstart="false"
+        app:starEmpty="@mipmap/ic_star_empty"
+        app:starFill="@mipmap/ic_star_full"
+        app:starImageHeight="20dp"
+        app:starImagePadding="5dp"
+        app:starImageWidth="20dp" />
+
+    <TextView
+        android:id="@+id/tv_item_mechanism_fragment2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ratingbar"
+        android:text="暂无评分"
+        android:textColor="#FA952F"
+        android:textSize="13sp" />
+
+</RelativeLayout>

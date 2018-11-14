@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/drawable_line"
+    android:showDividers="end"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="22dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:focusable="false"
+            android:textSize="@dimen/sp_16" />
+
+       <com.zhishen.aixuexue.weight.layout.NineGridView
+           android:id="@+id/nineGridLayout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/dp_16"
+           app:ngv_gridSpacing="4dp"
+           app:ngv_mode="grid"
+           app:ngv_singleImageRatio="1"
+           app:ngv_singleImageSize="180dp"/>
+
+        <include layout="@layout/view_home_news_comment_left" />
+    </LinearLayout>
+
+</LinearLayout>

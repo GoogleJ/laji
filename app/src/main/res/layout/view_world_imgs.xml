@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:divider="@drawable/drawable_line"
+    android:orientation="vertical"
+    android:showDividers="end">
+
+    <include layout="@layout/view_world_user_info" />
+
+
+    <com.zhishen.aixuexue.weight.layout.NineGridView
+        android:id="@+id/nineGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:ngv_gridSpacing="4dp"
+        app:ngv_mode="grid"
+        app:ngv_singleImageRatio="1"
+        app:ngv_singleImageSize="180dp" />
+
+    <include layout="@layout/view_world_tools" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/btn_input_white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_delete_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/Tips"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_delete_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:lineSpacingExtra="5dp"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="@string/contact"
+        android:textSize="15sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="10dp"
+        android:background="@color/wight_grey" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar">
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:text="@string/cancel"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/font_blue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_height="match_parent" />
+        <View
+            android:id="@+id/view_line_dialog"
+            android:layout_width="1dp"
+            android:background="@color/wight_grey"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_ok"
+            android:text="@string/ok"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/font_blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

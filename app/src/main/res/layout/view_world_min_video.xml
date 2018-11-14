@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/drawable_line"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:showDividers="end">
+
+    <include layout="@layout/view_world_user_info" />
+
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_world_play" />
+    </FrameLayout>
+
+    <include layout="@layout/view_world_tools" />
+
+</android.support.v7.widget.LinearLayoutCompat>

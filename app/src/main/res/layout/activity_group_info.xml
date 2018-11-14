@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_groupinfo_gray"
+    android:orientation="vertical"
+    tools:context="com.zhishen.aixuexue.activity.group.GroupInfoActivity">
+
+    <ImageView
+        android:id="@+id/iv_group_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="32dp"
+        android:onClick="back"
+        android:src="@drawable/bt_icon_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="聊天详情"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/iv_group_avatar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_groupinfo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_group_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="智深数据官方活动群"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_groupinfo_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_groupinfo_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="ID:70001019"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_group_bg"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_groupinfo_member"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/iv_group_bg"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="群成员"
+                    android:textColor="@color/font_black" />
+
+                <TextView
+                    android:id="@+id/tv_groupinfo_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/sp_12"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@+id/iv_groupinfo_right1"
+                    android:gravity="center"
+                    android:text="322人"
+                    android:textColor="@color/font_black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_groupinfo_right1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_arrow_right" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_groupinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_groupinfo_member"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/rl_groupinfo_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rv_groupinfo"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="群名称"
+                    android:textColor="@color/font_black" />
+
+                <TextView
+                    android:id="@+id/tv_groupinfo_groupname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/sp_12"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@+id/iv_groupinfo_right2"
+                    android:gravity="center"
+                    android:text="智深数据官方活动群"
+                    android:textColor="@color/font_black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_groupinfo_right2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_groupinfo_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rl_groupinfo_name"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="群类型"
+                    android:textColor="@color/font_black" />
+
+                <TextView
+                    android:id="@+id/tv_groupinfo_grouptype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/sp_12"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@+id/iv_groupinfo_right3"
+                    android:gravity="center"
+                    android:text="付费群"
+                    android:textColor="@color/font_black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_groupinfo_right3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_arrow_right" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/rl_groupinfo_type"
+                android:layout_marginLeft="15dp"
+                android:background="@color/divider" />
+
+            <RelativeLayout
+                android:id="@+id/rl_groupinfo_chatlog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/view"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="清空聊天记录"
+                    android:textColor="@color/font_black" />
+
+
+                <ImageView
+                    android:id="@+id/iv_groupinfo_right4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_arrow_right" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_groupinfo_delete"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_25"
+                android:background="@drawable/shape_forgetpassword"
+                android:text="删除群组"
+                android:textColor="@color/font_black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_groupinfo_deleteandback"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_groupinfo_chatlog"
+                android:layout_margin="@dimen/dp_25"
+                android:background="@drawable/shape_forgetpassword"
+                android:text="删除并退出"
+                android:textColor="@color/font_black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

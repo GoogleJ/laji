@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wight_grey"
+    android:orientation="vertical"
+    tools:context="com.zhishen.aixuexue.activity.newfriend.AddFriendsNextActivity">
+
+    <include layout="@layout/activity_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/wight_grey"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|left"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_search_bg"
+            android:drawableLeft="@drawable/icon_search_gray"
+            android:drawablePadding="10dp"
+            android:gravity="center|left"
+            android:hint="@string/search"
+            android:paddingLeft="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_search"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_bg_white"
+        android:clickable="true"
+        android:paddingBottom="14dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="14dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_find"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_search_green_0" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_find"
+            android:text="@string/search"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_temp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/gloable"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

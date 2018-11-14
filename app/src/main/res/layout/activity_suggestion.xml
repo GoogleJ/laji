@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:divider="@drawable/drawable_line"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context=".activity.fragment.minefragment.user.UserFeedbackActivity">
+
+    <include layout="@layout/activity_header" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="请输入您的留言内容"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="3dp"
+        android:lines="8"
+        android:padding="8dp"
+        android:textColor="@color/textcolor1"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/shape_suggestion_btn"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="submit"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

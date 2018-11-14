@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0099ff</color>
+    <color name="colorPrimaryDark">#0099ff</color>
+    <color name="colorAccent">#0099ff</color>
+    <color name="gloable">#0099ff</color>
+    <color name="dark">#bdbdbd</color>
+    <color name="black">#ff000000</color>
+    <color name="translucence">#80000000</color>
+    <color name="font_black">#ff333333</color>
+    <color name="font_gray_white">#ff999999</color>
+    <color name="black_transformision">#5c5b5b</color>
+    <color name="white">#ffffff</color>
+    <color name="wight_grey">#f1f1f1</color>
+    <color name="divider">#e5e5e5</color>
+    <color name="login_btn_bg_graywhite">#DFDFDF</color>
+    <color name="light_blue">#4FC6E0</color>
+
+    <color name="themecolor">#4FC6E0</color>
+    <color name="textcolor1">#333</color>
+    <color name="textcolor2">#666</color>
+    <color name="textcolor3">#999</color>
+    <color name="font_blue">#79d3e7</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="blue_0195ff">#0195ff</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="common_top_bar">#4497F8</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="blue">#23A2E7</color>
+    <color name="error_item_color">#F6EBE6</color>
+
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_laser">#ff5489f1</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="font_black_0">#212121</color>
+    <color name="font_black_1">#424242</color>
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_3">#757575</color>
+    <color name="font_black_4">#9e9e9e</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+    <color name="bg_groupinfo_gray">#F6F6F6</color>
+    <color name="half_transparent">#8f000000</color>
+
+    <color name="addnotice_unable">#aaaaaa</color>
+</resources>

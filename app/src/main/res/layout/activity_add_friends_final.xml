@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhishen.aixuexue.activity.newfriend.AddFriendsFinalActivity">
+
+    <include layout="@layout/activity_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/pass_or_no_by_send"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_reason"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_et"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:text="@string/i_am"
+        android:textColor="#353535"
+        android:textSize="16sp" />
+</LinearLayout>

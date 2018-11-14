@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wight_grey"
+    android:orientation="vertical"
+    tools:context=".activity.ContactsActivity">
+
+    <include layout="@layout/activity_header" />
+
+    <include layout="@layout/search_header_item" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/wight_grey"
+        android:layout_height="match_parent">
+
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:descendantFocusability="afterDescendants"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false" />
+
+        <com.zhishen.aixuexue.weight.Sidebar
+            android:id="@+id/sidebar"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/floating_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

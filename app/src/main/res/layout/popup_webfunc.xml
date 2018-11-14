@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_popup_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_webfunc1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_webpage_refresh"
+                android:gravity="center"
+                android:text="刷新"
+                android:textColor="@color/textcolor1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_webfunc2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_webpage_copy"
+                android:gravity="center"
+                android:text="复制链接"
+                android:textColor="@color/textcolor1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_webfunc3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_webpage_nativeopen"
+                android:gravity="center"
+                android:text="浏览器打开"
+                android:textColor="@color/textcolor1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_webfunc4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_webpage_share"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="@color/textcolor1"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

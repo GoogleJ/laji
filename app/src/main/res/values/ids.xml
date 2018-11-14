@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="llNear" type="id" />
+    <item name="tvNear" type="id" />
+    <item name="ivNearArrow" type="id" />
+    <item name="llSort" type="id" />
+    <item name="tvSort" type="id" />
+    <item name="ivSortArrow" type="id" />
+    <item name="lvLeft" type="id" />
+    <item name="lvRight" type="id" />
+    <item name="llLanguage" type="id" />
+    <item name="tvLanguage" type="id" />
+    <item name="ll_filter_layout" type="id" />
+    <item name="ivLanguageArrow" type="id" />
+    <item name="mView" type="id" />
+    <item name="llNickname" type="id" />
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="quit" type="id" />
+</resources>

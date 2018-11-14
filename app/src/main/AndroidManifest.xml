@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zhishen.aixuexue">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26"
+        tools:overrideLibrary="com.htmessage.sdk|com.jrmf360.walletpaylib" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".main.AiApp"
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@drawable/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.zhishen.aixuexue.util.GlideCache"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1cd9941a77e841181c08dde45f51d547" />
+
+        <activity
+            android:name=".main.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask" />
+        <!-- 微信回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- QQ回调界面 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106986060" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- ###################################### 聊天相关######################################### -->
+        <service
+            android:name="com.htmessage.sdk.service.AwakeService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.htmessage.sdk.service.KeepAliveService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":push" />
+        <service
+            android:name="com.htmessage.sdk.service.MessageService"
+            android:exported="true" />
+        <service
+            android:name="com.htmessage.sdk.service.RemoteService"
+            android:exported="true"
+            android:process=":push" />
+
+        <receiver android:name="com.htmessage.sdk.receiver.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.conn.BACKGROUND_DATA_SETTING_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.htmessage.sdk.receiver.SystemReceiver"
+            android:exported="true"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.fragment.interactionfragment.ChatActivity" />
+        <activity
+            android:name=".activity.RegistActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Boot">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MechanismActivity" />
+        <activity android:name=".activity.SignActivity" />
+        <activity
+            android:name=".activity.ContactsActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.AddCommentActivity" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserSettingActivity"
+            android:label="@string/user_setting" />
+        <activity android:name=".activity.fragment.minefragment.user.UserDetailActivity" />
+        <activity
+            android:name=".activity.fragment.minefragment.follow.FollowPeopleActivity"
+            android:label="@string/follow_people" />
+        <activity
+            android:name=".activity.fragment.minefragment.follow.FollowOrganActivity"
+            android:label="@string/follow_organ" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserMineCollectActivity"
+            android:label="@string/user_collect" />
+        <activity
+            android:name=".activity.fragment.homefragment.NoticeListActivity"
+            android:label="@string/home_notice" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserCouponActivity"
+            android:label="@string/user_coupon" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserPrivacyActivity"
+            android:label="@string/user_privacy" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserOrderActivity"
+            android:label="@string/user_order" />
+        <activity
+            android:name=".activity.video.VideoPlayActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.voice.RecorderVideoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.video.CaptureVideoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.file.FileBrowserActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.fragment.homefragment.NewsReportActivity"
+            android:label="@string/news_report" />
+        <activity
+            android:name=".activity.fragment.homefragment.NewsWebActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:label="@string/news_dt"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.fragment.worldfragment.ImagePreviewActivity"
+            android:label="" />
+        <activity
+            android:name=".activity.fragment.worldfragment.VideoViewActivity"
+            android:label="" />
+        <activity
+            android:name=".activity.fragment.homefragment.NearOrganActivity"
+            android:label="@string/organ" />
+        <activity
+            android:name=".activity.fragment.homefragment.NearSearchActivity"
+            android:label="" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserSysNoticeActivity"
+            android:label="@string/user_sys_notice" />
+        <activity
+            android:name=".activity.fragment.homefragment.NoticeDetailActivity"
+            android:label="@string/home_notice_dt" />
+        <activity
+            android:name=".activity.fragment.homefragment.DiscountActivity"
+            android:label="@string/discount_act" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserInfoActivity"
+            android:label="@string/user_info" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserNickNameActivity"
+            android:label="@string/user_modify_nickname" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserImgCodeActivity"
+            android:label="@string/user_scancode" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserMoreActivity"
+            android:label="@string/user_more"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserSignActivity"
+            android:label="@string/user_sign" />
+        <activity
+            android:name=".activity.fragment.minefragment.user.UserFeedbackActivity"
+            android:label="@string/user_feedback" />
+        <activity
+            android:name=".activity.fragment.worldfragment.WorldFakeActivity"
+            android:label="@string/world_circle" />
+        <activity
+            android:name=".activity.fragment.worldfragment.multi.MultiImageSelectorActivity"
+            android:label="@string/world_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.fragment.worldfragment.WorldPublishActivity"
+            android:label="@string/world_publish" />
+        <activity
+            android:name=".activity.scan.CaptureActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/user_scan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.fragment.worldfragment.WorldLocalActivity"
+            android:label="@string/world_local" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activity.converstation.ConversationActivity" />
+        <activity android:name=".activity.newfriend.NewFriendsActivity" />
+        <activity android:name=".activity.newfriend.AddFriendsNextActivity" />
+        <activity android:name=".activity.newfriend.AddFriendsFinalActivity" />
+        <activity
+            android:name=".activity.GuideActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".activity.group.GroupListActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zhishen.aixuexue.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activity.fragment.findfragment.FindMoreActivity" />
+        <activity android:name=".activity.group.CreateGroupsActivity" />
+        <activity android:name=".activity.ReportActivity" />
+        <activity android:name=".activity.ReportReasonActivity" />
+        <activity android:name=".activity.group.GroupMemberActivity" />
+        <activity
+            android:name=".activity.ShowBigImageActivity"
+            android:theme="@style/activity_animtion" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.ChangePassActivity" />
+        <activity android:name=".activity.ChooseLocationActivity" />
+        <activity android:name=".activity.fragment.minefragment.user.UserDetailNewActivity" />
+        <activity android:name=".activity.ForgetPasswordActivity2" />
+        <activity android:name=".activity.group.GroupInfoActivity"></activity>
+    </application>
+
+</manifest>
