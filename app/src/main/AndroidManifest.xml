@@ -4,7 +4,7 @@
     package="com.zhishen.aixuexue">
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="17"
         android:targetSdkVersion="26"
         tools:overrideLibrary="com.htmessage.sdk|com.jrmf360.walletpaylib" />
 
